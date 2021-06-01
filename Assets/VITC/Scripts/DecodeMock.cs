@@ -33,10 +33,13 @@ public class DecodeMock : MonoBehaviour
     }
 
     public TimeSpan ReadVitcLine(float[] vitcLine, int lineSize, float thresholdBlack = 0.1f,
-        float thresholdGray = 0.6f, float thresholdWhite = 0.9f)
+        float thresholdGray = 0.3f, float thresholdWhite = 0.5f)
     {
         // Decode here
-
+        // THIS IS COLOR READ TEST
+        Debug.Log($"Last line: {vitcLine[vitcLine.Length - (lineSize/2)]:F1}");
+        
+        
         // Temporary result by Time.time
         //https://docs.unity3d.com/ja/2019.4/ScriptReference/Time-time.html
         var temporary = Time.time;
